@@ -2,7 +2,7 @@
 
 **Mumbai's Multimodal Transit Engine** — find the smartest route across local trains, metro, monorail, BEST buses, walking, and cabs in one unified system.
 
-🔗 **Live Demo:** [navicore.streamlit.app](https://navicore.streamlit.app)
+🔗 **Live Demo:** [navicore.streamlit.app](https://navicorepro.streamlit.app)
 
 ---
 
