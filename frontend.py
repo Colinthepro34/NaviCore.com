@@ -564,19 +564,20 @@ def main():
     # ==========================================
     st.markdown("""
     <div class="black-section-container">
-        <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
-            <div style="flex: 1; min-width: 300px;">
+        <div style="display:flex;flex-wrap:wrap;gap:2rem;align-items:center;">
+            <div style="flex:1;min-width:300px;">
                 <div class="black-section-title">PAT.ai</div>
                 <div class="black-section-text">
-                    PAT.ai (Perform • Analyze • Transform) is a smart data assistant that lets users upload a dataset and analyze it using simple natural language commands.
-                    It automatically interprets prompts to perform statistical analysis, visualization, data cleaning, and predictions.
+                    PAT.ai (Perform • Analyze • Transform) is a smart data assistant that
+                    lets users upload a dataset and analyze it using simple natural language
+                    commands. It automatically interprets prompts to perform statistical
+                    analysis, visualization, data cleaning, and predictions.
                 </div>
-                <a href="#" class="white-btn">Try it</a>
+                <a href="https://pat-ai-maf6edxnuysrl84qfmjgwt.streamlit.app/" class="white-btn" target="_blank" rel="noopener noreferrer">Try it</a>
             </div>
-            <div style="flex: 1; min-width: 300px; text-align: center;">
+            <div style="flex:1;min-width:300px;text-align:center;">
                 <img src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=552/height=368/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9jNjQyNWRmNC0zMTkwLTRmZTEtODY2Ni02YTVhZjJjMGEwNDkucG5n"
-                     alt="NaviCore Pro"
-                     style="max-width: 100%; height: auto; border-radius: 12px;">
+                     style="max-width:100%;height:auto;border-radius:12px;">
             </div>
         </div>
     </div>
