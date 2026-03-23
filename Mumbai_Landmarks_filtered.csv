@@ -1,0 +1,600 @@
+name,latitude,longitude,tag
+61 Ward Office,19.1510343,72.8343732,office:government
+A.M. High School & Junior College,19.1855632,72.8185528,office:educational_institution
+AMAN,19.0524549,72.9185421,amenity:hospital
+Aarey,19.1693242,72.8587918,railway:station
+Aarey JVLR,19.1304284,72.8843492,railway:station
+Abu Village,19.1639912,72.8888355,tourism:attraction
+Acharya Atre Chowk,18.9978202,72.8177201,railway:station
+Acharya Atre Nagar,19.0236472,72.8637994,railway:station
+Ahilya Building,18.8988449,72.813845,office:government
+Airoli,19.1585231,72.9994023,railway:station
+Airport Authority of India Offices,19.1084184,72.8565724,office:government
+Airport Road,19.110135,72.8741686,railway:station
+Ajanta,19.0886,72.8275,tourism:hotel
+Akurli,19.1981585,72.8604905,railway:station
+Alankar Classes Nilesh Sir,19.1194123,72.8412822,office:educational_institution
+Allen Institute,19.1702113,72.9534085,office:educational_institution
+Ambassador,19.103681,72.8754749,tourism:hotel
+Ambedkar Nagar,19.0015921,72.8442272,railway:station
+Ameeta patil  Nursing Home,19.0622247,72.8997288,amenity:hospital
+Amphitheatre,19.0425669,72.8188717,tourism:attraction
+Amrapali Arcade,19.2228984,72.9667815,amenity:marketplace
+Anand Nagar,19.2572087,72.8663486,railway:station
+Andheri,19.1196976,72.8464205,railway:station
+Andheri (West),19.1291337,72.8314307,railway:station
+Andheri L1,19.1205638,72.8488433,railway:station
+Andheri Market,19.1232654,72.8459141,amenity:marketplace
+Andheri Tahsildar Office,19.1247344,72.8400558,office:government
+Anil Thakur Guest House,19.1760671,72.7966333,tourism:hotel
+Anita Mahal,19.0693839,72.8836606,tourism:hotel
+"Ankit Fracture, Maternity and Surgical Hospital",19.2270454,72.8605924,amenity:hospital
+Antop Hill,19.0301805,72.8669504,railway:station
+Asalpha,19.0964224,72.8948783,railway:station
+Assistant Residential Engineer Mumbai Port Trust Office,18.9133365,72.8234743,office:government
+Atlantic,19.0870126,72.8274729,tourism:hotel
+Atlas Skill Tech University,19.071018,72.8758648,office:educational_institution
+Aurobindo,19.0759804,72.8990388,office:educational_institution
+Automotivation,19.1731891,72.8486507,office:educational_institution
+Azad Nagar,19.1269102,72.8376484,railway:station
+B.R. Ambedkar park,19.1651808,72.847179,leisure:park
+BIORIIDL,19.0750979,72.8987273,office:educational_institution
+BMC G South Ward Office,19.0083276,72.8304787,office:government
+BMC M Ward Office,19.061105,72.8991057,office:government
+BMC Office,19.04336,72.8656281,office:government
+BMC Park,19.2180094,72.8432484,leisure:park
+BMC S Ward,19.1360309,72.9295794,office:government
+BMC S Ward Municipal Chowky,19.1625905,72.9379174,office:government
+BMC Ward Office,19.0299554,72.854268,office:government
+BSNL,19.0448287,72.9175244,railway:station
+Babul,19.1217301,72.8318524,tourism:hotel
+Bahmandai Municipal Corporat,19.0222734,72.8666106,office:government
+Bandra,19.0549792,72.8402203,railway:station
+Bandra Colony,19.0699627,72.8493601,railway:station
+Bandra Fort Gate,19.042924,72.8185972,tourism:attraction
+Bandra Kurla Complex (BKC),19.0606629,72.8546797,railway:station
+Bandra Market,19.0537188,72.8329159,amenity:marketplace
+Bandra Terminus,19.0627041,72.841303,railway:station
+Banganga Tank,18.9454866,72.7936879,tourism:attraction
+Bangur Nagar,19.1624723,72.8348708,railway:station
+Bayside Mall,18.9761191,72.8126014,shop:mall
+Bethany Hospital,19.2198203,72.9618661,amenity:hospital
+Bhakti Park,19.028972,72.8775722,railway:station
+Bhandup,19.1438684,72.9384327,railway:station
+Bharat Petroleum,19.0352839,72.8955553,railway:station
+Bharatiya Vidya Bhavan,18.9574378,72.810835,office:educational_institution
+Bhaskarachrya,19.0727007,72.9006174,office:educational_institution
+Bhattipada Market,19.150165,72.936597,amenity:marketplace
+"Big Bazzar, Kandivali",19.1900395,72.8591049,shop:mall
+Big Centre,19.2681353,72.9650168,shop:mall
+Blue Ballerina,19.1622,72.785,tourism:hotel
+"Bombay Cambrige Schoool, Amboli",19.1277074,72.8404126,office:educational_institution
+Borivali,19.229068,72.8573628,railway:station
+Borivali (West),19.2313925,72.8408607,railway:station
+Borivali Municpal Market,19.2301091,72.8557584,amenity:marketplace
+Borivali West,19.2298129,72.8471376,amenity:hospital
+Boulevard,19.2118699,72.9850732,shop:mall
+Bramhand Phase 5,19.24472,72.9836332,leisure:park
+Brand Factory Vikhroli,19.1210015,72.9266646,shop:mall
+Brihanmumbai Municipal Corporation Office of the Deputy Commissioner of Encroachment Removal,18.9842938,72.8381104,office:government
+Bureau of Civil Aviation Security,19.1083812,72.8568527,office:government
+Byculla,18.9766219,72.8327936,railway:station
+CSMI Airport Domestic T1,19.093899,72.8535765,railway:station
+CSMI Airport International T2,19.1023335,72.8744692,railway:station
+Cannon 1,18.9620892,72.9285928,tourism:attraction
+Cannon 2,18.9602159,72.9288297,tourism:attraction
+Carlton Hotel,18.9224055,72.8326985,tourism:hotel
+Castella de Aguada,19.0419788,72.8184995,tourism:attraction
+Cecil,18.958401,72.811296,tourism:hotel
+Central Lawn,18.9696231,72.8071474,leisure:park
+Central Pump House,18.906564,72.8064378,office:government
+Centre For Development Of Advanced Computing,19.1147399,72.8339566,office:government
+Chakala - J.B. Nagar,19.1120359,72.8676218,railway:station
+"Chandraganga Hospital, Mulund",19.1760293,72.9618357,amenity:hospital
+Charkop Market,19.2155689,72.8286214,amenity:marketplace
+Charni Road,18.9518437,72.8182401,railway:station
+Chembur,19.0612128,72.8975909,railway:station
+Chhatrapati Shivaji Maharaj Terminus,18.9398631,72.8354028,tourism:attraction
+Chhatrapati Shivaji Maharaj Terminus,18.9408329,72.831861,railway:station
+Chhatrapati Shivaji Municipal Market,19.0196408,72.841594,amenity:marketplace
+Chief defence of municipal corporation,19.1302903,72.9381689,office:government
+Chinchpokli,18.9871984,72.8326716,railway:station
+Chuna Bhatti,19.0517703,72.8690974,railway:station
+Churchgate,18.9354797,72.8271741,railway:station
+Citi Mall,19.138773,72.8313117,shop:mall
+Citizen Hotel,19.095697,72.8269623,tourism:hotel
+City Centre Mall,19.1623421,72.8457567,shop:mall
+Classic,19.0835527,72.8384747,tourism:hotel
+Collector office ( churgate),18.9326905,72.8274129,office:government
+Collector office churchgate,18.9329998,72.8274585,office:government
+Color Scape Mall,19.1826178,72.954252,shop:mall
+Commander Works Engineer (NW),18.9074002,72.8111665,office:government
+Commissioner General And Official Trustee,18.9265193,72.8311365,office:government
+Cotton Green,18.9871866,72.8438965,railway:station
+Crystal Plaza,19.140853,72.8324598,shop:mall
+Cuffe Parade,18.9135692,72.8207152,railway:station
+Currey Road,18.9945514,72.8328707,railway:station
+D.N. Nagar,19.128292,72.8301934,railway:station
+Dadar,19.0177342,72.8437523,railway:station
+Dadar East,19.0162531,72.8522274,railway:station
+Dadar Flower Market,19.0117531,72.8372248,amenity:marketplace
+Dadasaheb Phalke Chitranagari,19.1588018,72.8915614,tourism:attraction
+Dahanukarwadi,19.2062315,72.8348068,railway:station
+Dahisar,19.2493572,72.8596302,railway:station
+Dahisar (East) [Line 2],19.2517331,72.8673322,railway:station
+Dahisar (East) [Line 7],19.2506981,72.8666664,railway:station
+Devipada,19.2240357,72.8643251,railway:station
+Dhanlaxmi Shopping,19.2476542,72.9778174,amenity:marketplace
+Dharavi,19.0462612,72.849741,railway:station
+Diamond,18.99282,72.8486524,tourism:hotel
+Digha Gaon,19.1807762,72.9944301,railway:station
+Dindoshi,19.1797579,72.8582976,railway:station
+"Director General, Home Guards",18.9266181,72.8310812,office:government
+Directorate General of Civil Affairs,19.1084035,72.8567488,office:government
+Directorate Of Archives,18.9274053,72.8311878,office:government
+"Directorate of Government Printing, Stationery and Publication",18.9509865,72.8182676,office:government
+Divagaon Fish Market,19.1481739,72.9929835,amenity:marketplace
+Dockyard House,18.9029714,72.8101154,office:government
+Dockyard Road,18.9674767,72.8445477,railway:station
+Dolphin View,19.1437101,72.7893756,tourism:hotel
+Dongri Bazaar,18.9593702,72.8374994,amenity:marketplace
+Dr Kasbekar Sterling Hospital,19.0698454,72.9873953,amenity:hospital
+Dr Maitreyee Parulekar,19.0962884,72.8483799,amenity:hospital
+Dr Manveen Gill,19.132483,72.8274922,amenity:hospital
+Dr.zamil,19.0615785,72.9282129,amenity:hospital
+Dronagiri,18.8813327,72.9647315,railway:station
+East Zone,18.9947867,72.8252093,shop:mall
+Edupoint Learning Centre,19.2312647,72.9697288,office:educational_institution
+Eksar,19.2403773,72.8434456,railway:station
+Electoral Registration Officer,19.2013005,72.854391,office:government
+Elephanta Caves,18.9630478,72.931902,tourism:attraction
+Elite Shopping Centre,18.932119,72.8329359,shop:mall
+Esplanade High School and Junior College,19.2036379,72.8412465,office:educational_institution
+Eternity Mall,19.1871375,72.9628671,shop:mall
+Evershine Mall,19.1789816,72.8360818,shop:mall
+Excellent Classes,19.0826152,72.8829736,office:educational_institution
+Executive Engineer MHADA Office,18.9120445,72.8173417,office:government
+Express Zone Mall,19.1762836,72.8581041,shop:mall
+FR.JUSTIN DSOUZA GROUND,19.1951486,72.8349183,leisure:park
+FTA HSRP Solutions Fitment Center,19.165674,72.991142,office:government
+Fertilizer Township,19.0438776,72.893456,railway:station
+Filix Mall,19.1597676,72.9369209,shop:mall
+Film City Temple,19.1547465,72.895178,tourism:attraction
+Fish Market,19.1066769,72.9140711,amenity:marketplace
+Fishery Survey Of India,18.9095309,72.8249225,office:government
+Flamingo Point,18.9956242,72.8615436,tourism:attraction
+Footware market,19.0593612,72.8879296,amenity:marketplace
+Fort Market,18.9347971,72.8366427,amenity:marketplace
+Fr C Rodrigues Institute of Technology,19.0760467,72.991767,office:educational_institution
+GSLV Rocket Model,19.1800792,72.9396345,tourism:attraction
+Galaxy (Salman Khan House),19.0540346,72.8234836,tourism:attraction
+Galleria,19.1193665,72.9115954,shop:mall
+Ganesh Maidan,19.1726378,72.8676047,leisure:park
+Geeta Bharat Jain Office,19.2980991,72.8631914,office:government
+Gems School of Excellence,19.2709991,72.8613443,office:educational_institution
+Gender & Science Exhibit,19.0421717,72.9280492,tourism:attraction
+Ghatkopar,19.0856928,72.9083668,railway:station
+Ghatkopar L1,19.0867,72.9080738,railway:station
+Ghatkopar West Market,19.0863076,72.9055497,amenity:marketplace
+Ghatkopar West Vegetable Market,19.0873608,72.9069454,amenity:marketplace
+Ghatla,19.0517387,72.9103117,tourism:hotel
+Ghodbunder Market,19.2926805,72.89135,amenity:marketplace
+Gilbert Hill,19.1205355,72.8399617,tourism:attraction
+Girgaon,18.9521015,72.8222065,railway:station
+Girgaum Chowpatty Beach,18.9543869,72.8114236,tourism:attraction
+Giri pushpa Park,19.1757507,72.8534476,leisure:park
+Gopi Tank Market,19.0307372,72.8422365,amenity:marketplace
+Goregaon,19.1648688,72.8495492,railway:station
+Goregaon (East),19.1524492,72.8565966,railway:station
+Goregaon (West),19.1530241,72.8356664,railway:station
+Govandi,19.0553688,72.9150702,railway:station
+Goyal Shopping Centre,19.2288558,72.8555473,shop:mall
+Grand Zone,18.9951208,72.8242044,shop:mall
+Grant Road,18.9633549,72.8158261,railway:station
+Great Punjab Hotel,18.9440303,72.829059,tourism:hotel
+Green Park,19.1884202,72.9715103,leisure:park
+Growels 101,19.2028845,72.8598217,shop:mall
+Gundavali,19.1145125,72.8551556,railway:station
+Guru Tegh Bahadur Nagar,19.0366871,72.8707858,railway:station
+H W Ward Office,19.0563696,72.8355608,office:government
+Hakone,19.1224971,72.9136369,shop:mall
+Har Har Gange Waterfalls,19.2546034,72.969503,tourism:attraction
+Harmony (BJP-Office),19.2762898,72.8629328,office:government
+Harmony Mall,19.1575954,72.8346788,shop:mall
+Harmony Management Solutions,19.2328659,72.9704287,office:educational_institution
+Heera Panna Shopping Complex,19.1182961,72.905185,shop:mall
+Hemant Manjrekar Market,19.03665,72.8651448,amenity:marketplace
+Herron ms-cit clases,19.039997,72.9478829,office:educational_institution
+High Street Mall,19.2171975,72.9808709,shop:mall
+Highway Inn,19.1175319,72.8508646,tourism:hotel
+Holy Family Nursing Institute,19.0822231,72.8878146,office:educational_institution
+Hotel Adarsh Palace,18.9487539,72.8293568,tourism:hotel
+Hotel Mogul Palace,18.9546342,72.8354513,tourism:hotel
+Hotel Shantidoot,19.0084975,72.8405638,tourism:hotel
+Hutatma Chowk,18.9341849,72.8325037,railway:station
+Hyat Hosptal,19.1806805,72.8630713,amenity:hospital
+ISRO (Government Department of Space),19.0714053,72.8317529,office:government
+Ideal high-school,19.1258166,72.918885,office:educational_institution
+Imperial Palace,18.9447467,72.834718,tourism:hotel
+InOrbit Mall,19.1729402,72.8354508,shop:mall
+Indian Customs - Hay Bunder,18.9793155,72.858625,office:government
+Indian Meterological Department,18.8979151,72.8132034,office:government
+Indraprasth Shopping Center,19.2269466,72.8559399,shop:mall
+Infiniti Mall,19.1851346,72.8353721,shop:mall
+Inlaks Hospital,19.0466131,72.8964218,amenity:hospital
+JOY Hospital,19.0558773,72.8973945,amenity:hospital
+Jagannath Shankar Sheth Metro,18.9699923,72.8211795,railway:station
+Jagruti Nagar,19.0925802,72.9019098,railway:station
+Jai Bhawani Dainandin Bazaar,19.1503397,72.9954481,amenity:marketplace
+Jai Kisan Mandai,19.0627645,72.8980066,amenity:marketplace
+Jain Education Society,19.0174751,72.8568133,office:educational_institution
+Jalsa (Amitabh Bacchan House),19.1049088,72.8275345,tourism:attraction
+Janata Timber Market,19.0616805,72.9166232,amenity:marketplace
+Jasmine Hospital And Wow Clinic,19.1486707,72.9998192,amenity:hospital
+Jawaharlal Nehru Port Authority,18.9310304,72.9585874,office:government
+Jay Prakash,19.1623,72.8513,tourism:hotel
+Jevan Vikas Hospital,19.1106501,72.8483274,amenity:hospital
+Jewel of Chembur,19.0616667,72.8997266,tourism:hotel
+Jio World Drive,19.0536104,72.8505449,shop:mall
+Jogeshwari (East),19.1429455,72.855185,railway:station
+Jogeshwari (Harbour Line),19.1411537,72.8494209,railway:station
+Jogeshwari (Western Line),19.1361144,72.848936,railway:station
+Joggers Park,19.2162523,72.8177768,leisure:park
+Jollyland,19.0491708,72.9051478,tourism:hotel
+K J Industrial Training Institute,19.0720683,72.8993052,office:educational_institution
+K J Somaiya College Of Arts And Commerce,19.0749103,72.899696,office:educational_institution
+K J Somaiya College of Education,19.0755292,72.8986297,office:educational_institution
+K J Somaiya College of Science and Commerce,19.0754562,72.8992597,office:educational_institution
+K J Somaiya Institute of Management,19.0728439,72.8978084,office:educational_institution
+K J Somaiya School of Enginnering,19.0729263,72.8999615,office:educational_institution
+KES College,19.2021873,72.8467542,office:educational_institution
+Kala Qila,19.0509899,72.8601653,tourism:attraction
+Kalbadevi,18.946329,72.827193,railway:station
+Kalina University Campus Park,19.080562,72.8614154,leisure:park
+Kalva,19.1952243,72.9963331,railway:station
+Kamlakar Classes,19.1486572,72.9911874,office:educational_institution
+Kandarpada,19.2566337,72.850504,railway:station
+Kandivali,19.2041136,72.8517376,railway:station
+Kandivali (West),19.2140036,72.8373054,railway:station
+Kanheri Cave Complex,19.2064728,72.9061474,tourism:attraction
+Kanjur Marg,19.1296868,72.9283701,railway:station
+Karthik Classes,19.1459665,72.9892671,office:educational_institution
+Kena Market,19.0575799,72.9131817,amenity:marketplace
+Kendriya Sadan,19.0271381,72.8710163,office:government
+Kennedy's classes,19.082498,72.8836434,office:educational_institution
+Khar Road,19.0682411,72.8400412,railway:station
+Kharbhav,19.298321,72.9844677,railway:station
+King's Circle,19.0316822,72.8577375,railway:station
+Kohinoor City Mall,19.0816828,72.8864339,shop:mall
+Kori Classes,19.0534166,72.8708913,office:educational_institution
+Korum Mall,19.2030954,72.9650664,shop:mall
+Kumaria Presidency,19.1065999,72.8769001,tourism:hotel
+Kurar,19.1872999,72.8584547,railway:station
+Kurla,19.0652757,72.8792179,railway:station
+Kurla Nursing Room,19.0708167,72.8806792,amenity:hospital
+Kwan Tai Shek Temple,18.9660503,72.8467717,tourism:attraction
+Lakadi Pool Market,19.2101186,72.9535254,amenity:marketplace
+Lake City Mall,19.2171394,72.9793293,shop:mall
+Lake Shore Mall,19.208383,72.9718243,shop:mall
+Lakshmi Market,19.0703276,72.8790973,amenity:marketplace
+Leela Kempinski,19.1065748,72.8761199,tourism:hotel
+Local Market,19.1435448,72.9929352,amenity:marketplace
+Lokmanya Tilak Market,18.9611708,72.8184931,amenity:marketplace
+Lokmanya Tilak Terminus,19.0694658,72.8919779,railway:station
+Lotus Multispeciality Hospital,19.1531186,72.9411305,leisure:park
+Lower Malad,19.1730984,72.8364801,railway:station
+Lower Oshiwara,19.1406979,72.8317139,railway:station
+Lower Parel,18.99568,72.8302756,railway:station
+M East Ward Office,19.0564247,72.9214373,office:government
+MBPT Colaba Fish Market,18.9138334,72.8237865,amenity:marketplace
+MCGM Building,19.056876,72.8336956,office:government
+MCGM H West Ward Office,19.0727405,72.8396565,office:government
+MIDC - Andheri,19.1173537,72.8735966,railway:station
+MMRDA Old Building,19.0549419,72.8519078,office:government
+MSEB,19.0548666,72.8453839,office:government
+MSSMPA,19.0749658,72.8986455,office:educational_institution
+MTNL Telephone Exchange,18.9159408,72.8202483,office:government
+MUNCIPAL MARKED,19.0188644,72.8413,amenity:marketplace
+MVIRDC World Trade Centre,18.9144418,72.8173485,office:government
+Madh Chowpatty,19.151039,72.7867132,tourism:attraction
+Madh Fort,19.1324703,72.7946179,tourism:attraction
+Magathane,19.2167968,72.8668012,railway:station
+Magnet Mall,19.1417196,72.9314615,shop:mall
+Mahalaxmi,18.9825203,72.8242196,railway:station
+Mahanagar Gas (Payments & Accounts),19.0559203,72.8516131,office:government
+Maharashtra Vidhan Bhavan,18.9260617,72.8242068,office:government
+Mahatma Gandhi Market,19.0313174,72.8589503,amenity:marketplace
+Mahatma Jyotiba Phule Mandai,18.9473287,72.8345502,tourism:attraction
+Mahatma Jyotiba Phule Wholesale Fish Market,18.9461984,72.8353238,amenity:marketplace
+"Mahila Fish Market, Mahim",19.0404025,72.8439829,amenity:marketplace
+Mahim Junction,19.0406634,72.8466038,railway:station
+Mahsul Bhavan,19.0543447,72.8386984,office:government
+Main Bazaar,19.1748471,72.9367606,amenity:marketplace
+Main Garden,19.2100321,72.8696116,leisure:park
+Maker Arcade,18.9168432,72.8172761,shop:mall
+Malad,19.1867193,72.8485884,railway:station
+Malad (West),19.1852851,72.8358611,railway:station
+Manas Serological Institute Blood Bank,19.1352022,72.8481451,leisure:park
+Mandale,19.0495787,72.9386763,railway:station
+Mandapeshwar - I.C. Colony,19.2495856,72.8458001,railway:station
+Mangal Murti Hospital and Polyclinic,19.2263008,72.8278848,amenity:hospital
+Mangaldas Market,18.9481291,72.8323712,tourism:attraction
+Manish Market,18.9466552,72.8360803,amenity:marketplace
+Manisha Cottage,19.1458595,72.7895646,tourism:hotel
+Mankhurd,19.0485178,72.9323356,railway:station
+Mannat Lands End (Shah Rukh Khan's Bungalow),19.0468349,72.8201139,tourism:attraction
+Mantralaya,18.9276788,72.826949,office:government
+"Marine Drive, Mumbai",18.9414868,72.8238464,tourism:attraction
+Marine Lines,18.945764,72.8237193,railway:station
+Marol Naka (Line 3),19.1085041,72.878578,railway:station
+Marol Naka L1,19.1081525,72.8794868,railway:station
+Maruthi Mahal,19.0636369,72.8940601,tourism:hotel
+Masjid,18.9522949,72.8381771,railway:station
+Mata Ramabai B Ambedkar Hospital,19.0557141,72.8946408,amenity:hospital
+Matunga,19.0274356,72.8501467,railway:station
+Matunga Road,19.0278149,72.8466813,railway:station
+Maxus Mall,19.2962524,72.8485162,shop:mall
+Mega Mall,19.1518302,72.8343305,shop:mall
+Mentoring Angels Institute,19.1306266,72.9364921,office:educational_institution
+Metalife,19.0668912,72.9134181,amenity:hospital
+Milap,19.1961157,72.8471105,shop:mall
+Mint Colony,18.9945142,72.8433086,railway:station
+Mira Road,19.2816975,72.8560676,railway:station
+Mira Road Fish Market,19.2791853,72.857795,amenity:marketplace
+Mirza Ghalib Municipal Market,18.9578237,72.8293598,amenity:marketplace
+Mogra,19.1284364,72.8554558,railway:station
+Moksha Plaza,19.2259799,72.8546518,shop:mall
+Moolji Jaitha Market,18.9493759,72.8308478,amenity:marketplace
+Mulund,19.1721762,72.9562383,railway:station
+Mulund East Market,19.1716604,72.9578732,amenity:marketplace
+Mulund Fire Station Metro,19.1756975,72.9425406,railway:station
+Mulund Market,19.172984,72.954163,amenity:marketplace
+Mulund West Market,19.1723816,72.9554517,amenity:marketplace
+Mumbai CSMT,18.9404925,72.8357856,railway:station
+Mumbai Central,18.9695855,72.8193152,railway:station
+"Mumbai Corporation, E Ward offices",18.9722938,72.8312422,office:government
+Mumbai Fire Brigade HQ,18.9728097,72.8318751,office:government
+Mumbai Metropolitan Region Development Authority,19.0540019,72.8525094,office:government
+Mumbai Suburban Collectorate,19.0613396,72.8500552,office:government
+"Mumbai port Operations Service Center, Indira Dock",18.9387098,72.8385943,office:government
+Municipal Corporation of Greater Mumbai,18.940677,72.8342181,office:government
+"Municipal Garage, Worli",18.9950677,72.8185734,office:government
+Municipal Solid waste management office T ward,19.1730639,72.958974,office:government
+Mysore Colony,19.0277168,72.8914397,railway:station
+NANA-NANI PARK,19.0698753,72.9120691,leisure:park
+NISM Bhavan,19.0691729,72.9988601,office:educational_institution
+NMMC Office,19.0636378,72.9953632,office:government
+Nagar Bhavan,19.2990005,72.8493399,office:government
+Nahur,19.1550738,72.9469187,railway:station
+Naigaon,19.0095393,72.8478709,railway:station
+Nakshatra Mall,19.0198917,72.8413256,shop:mall
+Nandan Nilekani Main Building,19.1327894,72.9151444,office:educational_institution
+Nariman Point,18.9253433,72.8180282,tourism:attraction
+National Centre for Training and Research into Cerebral Palsy,19.0516428,72.8321317,amenity:hospital
+New Administrative Building,18.9431985,72.8347811,office:government
+New RTO (THANE),19.1927744,72.9621542,office:government
+New State Administration Building,18.9266352,72.8261478,office:government
+New Thane Station,19.179493,72.9634391,railway:station
+Nhava Sheva,18.898061,72.9877967,railway:station
+Night Market,18.9479637,72.8363,amenity:marketplace
+Nirman Sadan,19.0289577,72.8633821,office:government
+Oberoi - Sky City Mall,19.2235369,72.8635007,shop:mall
+Oberoi Mall,19.1737873,72.8605977,shop:mall
+Odeon Garden,19.0807327,72.9107148,leisure:park
+Office Of The Collectorate And District Magistrate - Mumbai City,18.9303467,72.8358706,office:government
+Office Of The Regional Port Officer Bandra,19.0743096,72.8222865,office:government
+"Office of Deputy Commissioner of Police, Zone IX",19.0561269,72.8354634,office:government
+Office of Sub-registrar,19.1185023,72.9354719,office:government
+Office of the Commissioner of Customs (Airport),19.1085246,72.8807265,office:government
+Office of the Deputy Municipal Commissioner (Special),19.0568473,72.8337792,office:government
+Orlem Market,19.1952165,72.8385863,amenity:marketplace
+Oshiwara,19.1460351,72.833952,railway:station
+Ovaripada,19.2431487,72.8641377,railway:station
+PV Park,19.2753956,72.8782307,leisure:park
+Pali Bazaar,19.0627331,72.8285401,amenity:marketplace
+Pali Hill Reservoir,19.0676969,72.8288243,office:government
+Palladium,18.9941924,72.8241384,shop:mall
+Palladium West Zone,18.9953164,72.8236906,shop:mall
+Parcel Office,18.9697452,72.8190267,office:government
+Parel,19.0094817,72.8376614,railway:station
+Parle Market,19.0997878,72.8453109,amenity:marketplace
+Passport Seva Kendra,19.1838048,72.8553764,office:government
+Pattan Swasthya Bhavan,18.9219658,72.8320406,office:government
+Phoenix Market City Kurla,19.0862762,72.8888465,shop:mall
+Phoenix Paragon Plaza,19.0855978,72.8888108,shop:mall
+Poisar,19.2035171,72.8631041,railway:station
+Powai Dental Clinic,19.1246531,72.9172844,amenity:hospital
+Powai Hospital,19.124088,72.9164511,amenity:hospital
+Powai Plaza,19.1229385,72.9131293,shop:mall
+Powai Vatika,19.1229152,72.9069326,tourism:attraction
+Prabhadevi,19.0074717,72.8358965,railway:station
+Public Distribution System Circle Office,19.0615145,72.8971034,office:government
+R City Mall,19.099772,72.9163097,shop:mall
+R Mall,19.1839823,72.9515925,shop:mall
+R Odean,19.079744,72.9092959,shop:mall
+R central Ward Office,19.2313779,72.8558832,office:government
+R-Mall (Ghodbunder),19.2301326,72.9773885,shop:mall
+RTO Thane,19.1891278,72.9643227,office:government
+Raghuleela Mall,19.0638705,72.9968695,shop:mall
+Raghuleela Mega Mall,19.2133099,72.8491541,shop:mall
+Ram Mandir,19.151023,72.8501467,railway:station
+Rashtriya Udyan,19.2348129,72.8630608,railway:station
+Rationing Card Office,19.1756267,72.9570868,office:government
+Ratna Mahal,19.1083564,72.8587789,tourism:hotel
+Reay Road,18.9775506,72.8441011,railway:station
+Regency,19.0790449,72.8462916,tourism:hotel
+Regional Meteorological Centre Mumbai,18.8975995,72.8131691,office:government
+Regional Transport Office - Mumbai East,18.9739613,72.816961,office:government
+"Regional Transport Office, Mumbai (West Zone), Andheri",19.1322677,72.8306551,office:government
+Reliance Mall,19.223965,72.8500336,shop:mall
+Retibandar- MBMC Mahanagar Palika,19.2929387,72.8916659,office:government
+Revo Institute,19.1877252,72.9751245,office:educational_institution
+Rmall,19.1838804,72.9517398,shop:mall
+Rohan,19.2221778,72.8522858,tourism:hotel
+Royal Garden,19.0894,72.8276,tourism:hotel
+Royal Touch Shopping Mall,18.9475828,72.8351196,shop:mall
+Ruby Isle Garden,19.1526461,72.8862794,leisure:park
+S K Somaiya Degree College,19.075125,72.8990791,office:educational_institution
+S K Somaiya Vinay Mandir Junior College,19.0748478,72.8989396,office:educational_institution
+SEEPZ,19.1259985,72.8737266,railway:station
+SIRAC,19.0748937,72.8983414,office:educational_institution
+SK Nizam Park,18.949838,72.8397419,leisure:park
+Sabina Chandrashekhar Memorial Municipal Garden and Playground,18.9246548,72.8304766,leisure:park
+Sabji Market,19.0317505,72.8603637,amenity:marketplace
+Saffron Baking Classes,19.2326902,72.9703634,office:educational_institution
+Sahar Road,19.102196,72.8652361,railway:station
+Sahkari Bhandar Mall,19.0188151,72.8328546,shop:mall
+Saidhanhospital Iccu and Eye Care,19.1682476,72.9612909,amenity:hospital
+Saifee Ambulance,18.9599377,72.8314957,amenity:hospital
+Sailee Hospital and Diagnostic Center,19.2277332,72.8406807,amenity:hospital
+Saint Anne's Hospital,19.2733799,72.883476,amenity:hospital
+Saki Naka,19.103536,72.8879581,railway:station
+Samraj,19.1097262,72.8594577,tourism:hotel
+Sandhurst Road,18.9609243,72.8393719,railway:station
+Sanjeevan Deep,19.1542883,72.9944543,office:educational_institution
+Sant Gadge Maharaj Chowk,18.9830921,72.8285867,railway:station
+Sant Jalaram Bappa Market,19.1729094,72.9546345,amenity:marketplace
+Santa Cruz,19.0815223,72.8417565,railway:station
+Santacruz,19.0792887,72.8471185,railway:station
+Science Museum,18.9908949,72.8213521,railway:station
+Sewri,18.9987796,72.8544218,railway:station
+Sewri Fish Market,18.9991592,72.8494932,amenity:marketplace
+Sewri Fort,19.0005078,72.8601265,tourism:attraction
+Sharada,18.9461969,72.8274147,tourism:hotel
+Shimpoli,19.2228332,72.8409432,railway:station
+Shitala Devi Mandir,19.0384641,72.8419646,railway:station
+Shivaji Chowk,19.0479345,72.9069699,railway:station
+Shivaji Park,19.0267688,72.8366692,leisure:park
+Shree Ram Vidyalya & Junior College,19.1566041,72.9968327,office:educational_institution
+Siddarth Municipal Hospital,19.1597156,72.8399209,amenity:hospital
+Siddhivinayak Temple,19.0158935,72.8309199,railway:station
+Singhania DC3,19.2099918,72.9657304,tourism:attraction
+Sinhal Junior College of Science,19.2379241,72.8560233,office:educational_institution
+Sion,19.0465213,72.8632834,railway:station
+Slum Rehabilitation Authority,19.2320055,72.9706007,office:government
+Somaiya School of Design,19.0753187,72.8985763,office:educational_institution
+Sonapur Market,19.1637783,72.9358748,amenity:marketplace
+St John The Baptist Shrine/Oratory,19.0481951,72.8258974,tourism:attraction
+St Lawrence Wonder Kids,19.1458012,72.9891594,office:educational_institution
+Star Mall,19.0228603,72.8420014,shop:mall
+"State Commission, Consumer Disputes Redressal",18.9265675,72.8311025,office:government
+Station Master,19.1721508,72.9562778,office:government
+Station Superintendent Office,19.2291897,72.8564778,office:government
+Steam Engine,18.9909836,72.8197117,tourism:attraction
+Sujay Hospital,19.116234,72.8339632,amenity:hospital
+Sun n Sheel,19.1111949,72.8719322,tourism:hotel
+Sunbeam Geeta,18.9978253,72.818454,tourism:hotel
+Sunder Nagar Garden,19.0773625,72.8661478,leisure:park
+Surya Shopping Centre,19.2745051,72.8695457,shop:mall
+Suyog Hospital and Iccu,19.1665006,72.9503077,leisure:park
+Swadeshi Market,18.9493555,72.8281221,amenity:marketplace
+T Ward BMC Chowky,19.1755697,72.9616034,office:government
+T Ward Office,19.1755958,72.9505276,office:government
+THAKUR COLLEGE ARTS,19.2599822,72.8598732,office:educational_institution
+TMC,19.20829,72.9602513,office:government
+TP Bhatia College,19.2015047,72.8465779,office:educational_institution
+Tahsildar Kurla (Mulund) Office,19.1759542,72.9581679,office:government
+Tata Star Bazaar,19.1308584,72.8308362,shop:mall
+Teen Hath Naka Station,19.1870457,72.9615868,railway:station
+Tehsildar Office,19.2968346,72.8486165,office:government
+Telephone Bhavan Colaba,18.9175158,72.8291232,office:government
+Thakur Shopping Mall & Multiplex,19.2632484,72.8743808,shop:mall
+Thakur ramnarayan college of Arts and Commerce,19.2548853,72.8663239,office:educational_institution
+Thane,19.186483,72.9757664,railway:station
+Thane District Collector,19.1968217,72.9786989,office:government
+Thane Municipal Corporation,19.1972286,72.9671722,office:government
+Thane Railway Reservation Office,19.1871453,72.9756243,office:government
+Thane Vegetable Market,19.1936476,72.9769662,amenity:marketplace
+The Origin International Fertility Centre,19.227965,72.9694447,amenity:hospital
+The Resort,19.1743671,72.7963333,tourism:hotel
+The Shipping Corporation of India Ltd.,18.9263886,72.8258506,office:government
+The Somaiya School (CBSE),19.0746561,72.9002651,office:educational_institution
+The Walm,19.2555018,72.9841195,tourism:attraction
+Ticket Checker Office,19.227969,72.8562821,office:government
+Tilak Nagar,19.0657855,72.8904702,railway:station
+Tirumala Shopping Center,19.1290885,72.8279771,shop:mall
+Tirupati,19.1136052,72.8804798,tourism:hotel
+Topiwala Vegetable Market,19.1631662,72.8473642,amenity:marketplace
+Trombay Market,19.0337238,72.9482665,amenity:marketplace
+Tuesday Evening Bazaar,19.167373,72.9319705,amenity:marketplace
+Tunga International,19.1154,72.872,tourism:hotel
+Umbrella traders market area,18.9477466,72.8295905,amenity:marketplace
+Uran City,18.8784186,72.9525001,railway:station
+Utopia Garden Grove Mall,19.2209998,72.8375456,shop:mall
+V MALL,19.2129955,72.8677227,shop:mall
+VMall,19.2118189,72.8673877,shop:mall
+VNP & RC Marg Junction,19.0526419,72.8942789,railway:station
+Vadala Road,19.0161355,72.8589129,railway:station
+Valnai-Meeth Chowky,19.1968293,72.8337752,railway:station
+Vashi,19.0632912,72.998762,railway:station
+Vashi Central,19.0672235,72.9983848,shop:mall
+Vedic Park,19.1328938,72.89823,tourism:attraction
+Veena Nagar Market,19.1821934,72.9456486,amenity:marketplace
+Vegetable Market,19.1717451,72.9573381,amenity:marketplace
+Versova,19.130252,72.8213775,railway:station
+Vidhan Bhavan,18.9262554,72.8241833,office:government
+Vidhan Bhavan,18.9247813,72.8254934,railway:station
+Vidyavihar,19.0795422,72.8971169,railway:station
+Vikhroli,19.1114795,72.928021,railway:station
+Vilasrao  Deshmukh Park,19.1983821,72.8756335,leisure:park
+Vile Parle,19.0999098,72.8440038,railway:station
+Vivako,19.0059,72.8186,tourism:hotel
+Viviana Mall,19.2087313,72.9716018,shop:mall
+WMART,19.0372789,72.9322796,shop:mall
+Wadala Bridge,19.0174849,72.8593168,railway:station
+Wadala Depot,19.0388244,72.8740249,railway:station
+Wadala Market,19.0175783,72.8547993,amenity:marketplace
+Wadala RTO Office,19.034056,72.8753608,office:government
+Western Express Highway,19.1158628,72.8564249,railway:station
+WonderMall,19.2211332,72.9772101,shop:mall
+Worli,19.0086057,72.8192741,railway:station
+Worli Fort,19.0237394,72.8168371,tourism:attraction
+Yashwantrao Chauhan Highschool,19.2039048,72.8424294,office:educational_institution
+aditya thakrey,19.2440126,72.864726,leisure:park
+al saadha,18.959709,72.8306376,amenity:marketplace
+arpan nursing home,19.0693933,72.8781202,amenity:hospital
+bba,19.0602605,72.9113338,amenity:hospital
+bhaji & machhi market,19.0480195,72.9113379,amenity:marketplace
+bhavin sir's private tution,19.2133186,72.8419585,office:educational_institution
+bialbazzar,19.0924542,72.8831198,leisure:park
+chanai park,19.1216305,72.8509955,leisure:park
+children park,19.0786873,72.9139937,leisure:park
+drd park,19.0430184,72.9115187,leisure:park
+footware Market,19.0588435,72.8870646,amenity:marketplace
+gr8 smile dental clinic,19.1068191,72.8507443,amenity:hospital
+green park,18.9512251,72.8298996,leisure:park
+hiranandani nana nani park,19.2766339,72.9834546,leisure:park
+jijamata udyan,19.0704347,72.9960453,leisure:park
+jonsons diagnostics,19.0501477,72.9193344,amenity:hospital
+maa hospital,19.0585059,72.8904048,amenity:hospital
+mahaveer hospital,19.0677525,72.9275925,amenity:hospital
+muktabai hospital,19.0946018,72.9032913,amenity:hospital
+nana nani park,19.1067556,72.8639564,leisure:park
+new life hospital,19.0897614,72.9049996,amenity:hospital
+nidan hospital,19.0924663,72.9121731,amenity:hospital
+orbits mall,18.9687093,72.8073895,shop:mall
+pradhnya ground,19.189328,72.8570365,leisure:park
+rajaram garden,19.1358725,72.8560273,leisure:park
+sacred heart boys' school,19.0741953,72.8385326,office:educational_institution
+safecomputing.in,19.2259024,72.9670907,office:educational_institution
+sam,19.0400958,72.9466514,leisure:park
+sanjeevan hospital,19.0608709,72.9247689,amenity:hospital
+santi park,19.019633,72.8628095,leisure:park
+sbi,19.107091,72.8639396,leisure:park
+seaview,19.0959916,72.8269037,tourism:hotel
+shopping malls,19.1709667,72.8516365,shop:mall
+sng paark,19.0503408,72.8914636,leisure:park
+thakur,19.2537186,72.8676809,office:educational_institution
+thakur ramnarayan college of Arts and Commerce,19.2537072,72.8676602,office:educational_institution
+trcac,19.2547784,72.8668868,office:educational_institution
+unity park,19.0450404,72.9336572,leisure:park
+v care hospital intensive& unit care,19.0634778,72.8817876,amenity:hospital
+western park,19.2602005,72.8598513,leisure:park
+कमला नेहरू पार्क,18.9549022,72.8048874,tourism:attraction
+पश्चिम रेल्वे मुख्यालय,18.9336373,72.8283172,office:government
+मातोश्री टॉवर,19.0260441,72.8421832,tourism:attraction
+माहीम किल्ला,19.0420113,72.8381267,tourism:attraction
+"राजभवन, मुंबई",18.9410646,72.7939174,office:government
+"वॉर्ड ऑफिस, दिघा",19.1800474,72.9980923,office:government
+संजय गांधी राष्ट्रीय उद्यान,19.2093238,72.9163268,tourism:attraction
+सायन किल्ला,19.046611,72.8676018,tourism:attraction

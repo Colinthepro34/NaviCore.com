@@ -1,0 +1,9 @@
+streamlit
+osmnx
+networkx
+pandas
+numpy
+requests
+matplotlib
+streamlit-js-eval
+scipy
