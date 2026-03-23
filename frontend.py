@@ -617,7 +617,7 @@ def main():
                     commands. It automatically interprets prompts to perform statistical
                     analysis, visualization, data cleaning, and predictions.
                 </div>
-                <a href="#" class="white-btn">Try it</a>
+                <a href="https://pat-ai-maf6edxnuysrl84qfmjgwt.streamlit.app/" class="white-btn" target="_blank" rel="noopener noreferrer">Try it</a>
             </div>
             <div style="flex:1;min-width:300px;text-align:center;">
                 <img src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=552/height=368/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9jNjQyNWRmNC0zMTkwLTRmZTEtODY2Ni02YTVhZjJjMGEwNDkucG5n"
