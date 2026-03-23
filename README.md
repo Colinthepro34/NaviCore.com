@@ -79,9 +79,10 @@ Edge types:
 NaviCore/
 ├── frontend.py                    # Streamlit UI — NaviCore interface
 ├── GPS.py                         # Routing engine — graph builder + Dijkstra
+├── app.py                         # Backend
 ├── Final Train Dataset.csv        # Station coordinates + timetable data
 ├── Final Bus Dataset.csv          # BEST bus stops + routes
-├── Mumbai_Landmarks_filtered.csv  # 599 curated Mumbai landmarks for dropdown
+├── Mumbai Landmarks.csv  
 ├── mumbai_graph.graphml.gz        # OSMnx road graph (CLI visualizer only)
 ├── requirements.txt
 └── README.md
