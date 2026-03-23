@@ -22,7 +22,6 @@ import osmnx as ox
 from GPS import (
     MumbaiData, Router, normalize,
     WALK_MIN_PER_KM, BUS_MIN_PER_KM, CAR_MIN_PER_KM,
-    MODE_COLORS,
 )
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -373,8 +372,15 @@ def render_map(steps, start_coords, end_coords, G_road, data) -> io.BytesIO:
         "car":      "#ffd700",
     }
 
+    try:
+        # osmnx >= 2.0
+        G_sub = ox.truncate.truncate_graph_bbox(G_road, bbox=(max_lat, min_lat, max_lon, min_lon))
+    except TypeError:
+        # osmnx < 2.0
+        G_sub = ox.truncate.truncate_graph_bbox(G_road, max_lat, min_lat, max_lon, min_lon)
+
     fig, ax = ox.plot_graph(
-        G_road, show=False, close=False,
+        G_sub, show=False, close=False,
         node_size=0, edge_color="#3a3a5c",
         edge_linewidth=0.4, bgcolor="#0a1628",
         figsize=(12, 12),
@@ -473,316 +479,306 @@ def render_map(steps, start_coords, end_coords, G_road, data) -> io.BytesIO:
 # ──────────────────────────────────────────────────────────────────────────────
 # MAIN UI
 # ──────────────────────────────────────────────────────────────────────────────
+# ── Hero header ──
+st.markdown("""
+<div class="hero">
+  <h1>🚇 Mumbai Multimodal Planner</h1>
+  <p>Find the fastest route using any combination of Mumbai's transport network</p>
+  <div style="margin-top:10px;">
+    <span class="mode-badge">⚡ Earliest Arrival</span>
+    <span class="mode-badge">🔄 Least Interchange</span>
+    <span class="mode-badge">🚏 Public Transport</span>
+    <span class="mode-badge">🚆 Local Train</span>
+    <span class="mode-badge">🚇 Metro &amp; Monorail</span>
+    <span class="mode-badge">🚌 BEST Bus</span>
+  </div>
+</div>
+""", unsafe_allow_html=True)
 
-def main():
-    # ── Hero header ──
-    st.markdown("""
-    <div class="hero">
-      <h1>🚇 Mumbai Multimodal Planner</h1>
-      <p>Find the fastest route using any combination of Mumbai's transport network</p>
-      <div style="margin-top:10px;">
-        <span class="mode-badge">⚡ Earliest Arrival</span>
-        <span class="mode-badge">🔄 Least Interchange</span>
-        <span class="mode-badge">🚏 Public Transport</span>
-        <span class="mode-badge">🚆 Local Train</span>
-        <span class="mode-badge">🚇 Metro &amp; Monorail</span>
-        <span class="mode-badge">🚌 BEST Bus</span>
-      </div>
-    </div>
-    """, unsafe_allow_html=True)
+# ── Load data ──
+try:
+    data   = load_data()
+    router = get_router(data)
+except FileNotFoundError as e:
+    st.error(f"Required data file not found: {e}")
+    st.stop()
 
-    # ── Load data ──
-    try:
-        data   = load_data()
-        router = get_router(data)
-    except FileNotFoundError as e:
-        st.error(f"Required data file not found: {e}")
-        st.stop()
+# ── Load landmarks ──
+try:
+    landmarks_df = load_landmarks()
+except FileNotFoundError:
+    st.error("Mumbai Landmarks.csv not found. Place it in the same directory as app.py.")
+    st.stop()
 
-    # ── Load landmarks ──
-    try:
-        landmarks_df = load_landmarks()
-    except FileNotFoundError:
-        st.error("Mumbai Landmarks.csv not found. Place it in the same directory as app.py.")
-        st.stop()
+landmark_labels  = ["📌 Custom coordinates…"] + landmarks_df["label"].tolist()
+landmark_by_label = {
+    row["label"]: (row["latitude"], row["longitude"])
+    for _, row in landmarks_df.iterrows()
+}
 
-    landmark_labels  = ["Enter Journey..."] + landmarks_df["label"].tolist()
-    landmark_by_label = {
-        row["label"]: (row["latitude"], row["longitude"])
-        for _, row in landmarks_df.iterrows()
-    }
+def coords_from_selection(label_key, lat_key, lon_key, default_lat, default_lon):
+    """Return (lat, lon) from either the dropdown or the custom inputs."""
+    sel = st.session_state.get(label_key, landmark_labels[0])
+    if sel and sel != landmark_labels[0]:
+        return landmark_by_label[sel]
+    return (
+        st.session_state.get(lat_key, default_lat),
+        st.session_state.get(lon_key, default_lon),
+    )
 
-    def coords_from_selection(label_key, lat_key, lon_key, default_lat, default_lon):
-        """Return (lat, lon) from either the dropdown or the custom inputs."""
-        sel = st.session_state.get(label_key, landmark_labels[0])
-        if sel and sel != landmark_labels[0]:
-            return landmark_by_label[sel]
-        return (
-            st.session_state.get(lat_key, default_lat),
-            st.session_state.get(lon_key, default_lon),
-        )
+# ── Sidebar ──
+with st.sidebar:
+    # ── Start ──────────────────────────────────────────────────────────
+    st.markdown("<div class='sidebar-card'>", unsafe_allow_html=True)
+    st.subheader("📍 Start Location")
+    start_sel = st.selectbox(
+        "Choose start",
+        options=landmark_labels,
+        key="start_sel",
+        help="Pick a landmark or choose 'Custom coordinates' to enter lat/lon manually",
+    )
+    if start_sel == landmark_labels[0]:
+        start_lat = st.number_input("Latitude",  value=19.0760, format="%.6f",
+                                    step=0.0001, key="slat")
+        start_lon = st.number_input("Longitude", value=72.8777, format="%.6f",
+                                    step=0.0001, key="slon")
+    else:
+        start_lat, start_lon = landmark_by_label[start_sel]
+        st.caption(f"📌 {start_lat:.5f}, {start_lon:.5f}")
+    st.markdown("</div>", unsafe_allow_html=True)
 
-    # ── Sidebar ──
-    with st.sidebar:
-        # ── Start ──────────────────────────────────────────────────────────
-        st.markdown("<div class='sidebar-card'>", unsafe_allow_html=True)
-        st.subheader("📍 Start Location")
-        start_sel = st.selectbox(
-            "Choose start",
-            options=landmark_labels,
-            key="start_sel",
-            help="Pick a landmark or choose 'Custom coordinates' to enter lat/lon manually",
-        )
-        if start_sel == landmark_labels[0]:
-            start_lat = st.number_input("Latitude",  value=19.0760, format="%.6f",
-                                        step=0.0001, key="slat")
-            start_lon = st.number_input("Longitude", value=72.8777, format="%.6f",
-                                        step=0.0001, key="slon")
-        else:
-            start_lat, start_lon = landmark_by_label[start_sel]
-            st.caption(f"📌 {start_lat:.5f}, {start_lon:.5f}")
-        st.markdown("</div>", unsafe_allow_html=True)
+    # ── Destination ─────────────────────────────────────────────────────
+    st.markdown("<div class='sidebar-card'>", unsafe_allow_html=True)
+    st.subheader("🔴 Destination")
+    end_sel = st.selectbox(
+        "Choose destination",
+        options=landmark_labels,
+        index=10,
+        key="end_sel",
+        help="Pick a landmark or choose 'Custom coordinates' to enter lat/lon manually",
+    )
+    if end_sel == landmark_labels[0]:
+        end_lat = st.number_input("Latitude",  value=19.1972, format="%.6f",
+                                  step=0.0001, key="elat")
+        end_lon = st.number_input("Longitude", value=72.9780, format="%.6f",
+                                  step=0.0001, key="elon")
+    else:
+        end_lat, end_lon = landmark_by_label[end_sel]
+        st.caption(f"📌 {end_lat:.5f}, {end_lon:.5f}")
+    st.markdown("</div>", unsafe_allow_html=True)
 
-        # ── Destination ─────────────────────────────────────────────────────
-        st.markdown("<div class='sidebar-card'>", unsafe_allow_html=True)
-        st.subheader("🔴 Destination")
-        end_sel = st.selectbox(
-            "Choose destination",
-            options=landmark_labels,
-            index=10,   # default to something interesting
-            key="end_sel",
-            help="Pick a landmark or choose 'Custom coordinates' to enter lat/lon manually",
-        )
-        if end_sel == landmark_labels[0]:
-            end_lat = st.number_input("Latitude",  value=19.1972, format="%.6f",
-                                      step=0.0001, key="elat")
-            end_lon = st.number_input("Longitude", value=72.9780, format="%.6f",
-                                      step=0.0001, key="elon")
-        else:
-            end_lat, end_lon = landmark_by_label[end_sel]
-            st.caption(f"📌 {end_lat:.5f}, {end_lon:.5f}")
-        st.markdown("</div>", unsafe_allow_html=True)
+    st.subheader("🚦 Travel Mode")
+    mode = st.selectbox(
+        "Mode",
+        options=["earliest_arrival", "least_interchange", "public_transport",
+                 "train", "metro", "bus", "car"],
+        format_func=lambda m: {
+            "earliest_arrival":  "⚡ Earliest Arrival (all modes)",
+            "least_interchange": "🔄 Least Interchange (all modes)",
+            "public_transport":  "🚏 Public Transport only (no cab)",
+            "train":             "🚆 Local Train only",
+            "metro":             "🚇 Metro & Monorail only",
+            "bus":               "🚌 Bus only",
+            "car":               "🚖 Cab only",
+        }[m],
+    )
 
-        st.subheader("🚦 Travel Mode")
-        mode = st.selectbox(
-            "Mode",
-            options=["earliest_arrival", "least_interchange", "public_transport",
-                     "train", "metro", "bus", "car"],
-            format_func=lambda m: {
-                "earliest_arrival":  "⚡ Earliest Arrival (all modes)",
-                "least_interchange": "🔄 Least Interchange (all modes)",
-                "public_transport":  "🚏 Public Transport only (no cab)",
-                "train":             "🚆 Local Train only",
-                "metro":             "🚇 Metro & Monorail only",
-                "bus":               "🚌 Bus only",
-                "car":               "🚖 Cab only",
-            }[m],
-        )
-
-        compute = st.button("🔍 Find Best Route", type="primary", use_container_width=True)
-
-        st.divider()
-        st.markdown("""
-        **Speed model**
-        <div style='font-size:0.82rem;color:#9aa7c4;margin-top:4px;'>
-        🚶 Walk: 12 min/km<br>
-        🚌 Bus: 4 min/km<br>
-        🚆 Train: timetable data<br>
-        🚖 Cab: 3 min/km (min 1 km)
-        </div>
-        """, unsafe_allow_html=True)
-
-    # ── Landing / pre-compute ──
-    if not compute:
-        c1, c2, c3 = st.columns(3)
-        with c1:
-            st.markdown("""
-            <div class='feature-card'>
-              <div class='feature-icon'>⚡</div>
-              <div class='feature-title'>Earliest Arrival</div>
-              <p class='feature-desc'>Dijkstra across all modes — local train, metro,
-              monorail, bus, cab and walk — minimising total journey time.</p>
-            </div>""", unsafe_allow_html=True)
-        with c2:
-            st.markdown("""
-            <div class='feature-card'>
-              <div class='feature-icon'>🔄</div>
-              <div class='feature-title'>Least Interchange</div>
-              <p class='feature-desc'>Uses all modes but penalises every line or
-              mode change heavily, so you transfer as few times as possible.</p>
-            </div>""", unsafe_allow_html=True)
-        with c3:
-            st.markdown("""
-            <div class='feature-card'>
-              <div class='feature-icon'>🚏</div>
-              <div class='feature-title'>Public Transport Only</div>
-              <p class='feature-desc'>All transit systems, walk-only access — no cabs.
-              Forces the route to stay on trains, metro, monorail and buses end</p>
-            </div>""", unsafe_allow_html=True)
-        st.info("👈 Choose your start and destination from the landmark dropdowns in the sidebar, then click **Find Best Route**.")
-        return
-
-    # ── Route computation ──
-    start_coords = (float(start_lat), float(start_lon))
-    end_coords   = (float(end_lat),   float(end_lon))
-
-    mode_labels = {
-        "earliest_arrival":  "Earliest Arrival",
-        "least_interchange": "Least Interchange",
-        "public_transport":  "Public Transport only",
-        "train": "Local Train", "metro": "Metro & Monorail",
-        "bus": "Bus", "car": "Cab",
-    }
-    with st.spinner(f"Computing {mode_labels.get(mode, mode)} route…"):
-        try:
-            result = router.route(start_coords, end_coords, mode)
-        except Exception as e:
-            st.error(f"Routing error: {e}")
-            st.exception(e)
-            return
-
-    if result[0] is None:
-        # Mode-specific helpful error messages
-        if mode == "metro":
-            st.error(
-                "No metro or monorail route found between these locations. "
-                "The metro network (Lines 1, 2A, 3, 7, Navi Mumbai Metro, Monorail) "
-                "may not serve your start or destination within the cab/walk radius. "
-                "Try **Earliest Arrival** to use all modes."
-            )
-        elif mode == "train":
-            st.error(
-                "No local train route found. "
-                "The Western, Central, Harbour or Trans-Harbour lines may not "
-                "serve both locations. Try **Earliest Arrival** to use all modes."
-            )
-        elif mode == "bus":
-            st.error(
-                "No bus route found between these locations. "
-                "No BEST bus routes were loaded that connect both points. "
-                "Try **Earliest Arrival** to use all modes."
-            )
-        elif mode == "public_transport":
-            st.error(
-                "No public transport route found. "
-                "Your start or destination may be too far from any transit stop to walk. "
-                "Try **Earliest Arrival** which allows a cab for the first/last mile."
-            )
-        else:
-            st.error("No route found between the selected locations.")
-        if result[3]:
-            for a in result[3]:
-                st.warning(a)
-        return
-
-    path, steps, total_time, advisories, G_multi = result
-
-    # ── Summary ──
-    total_dist = sum(s["distance_km"] for s in steps)
-    mode_times = {}
-    for s in steps:
-        mode_times[s["mode"]] = mode_times.get(s["mode"], 0) + s["time_min"]
-
-    # Human-readable names for the banner
-    start_name = (start_sel.split("  —  ")[0] if start_sel != landmark_labels[0]
-                  else f"{start_lat:.4f}, {start_lon:.4f}")
-    end_name   = (end_sel.split("  —  ")[0]   if end_sel   != landmark_labels[0]
-                  else f"{end_lat:.4f}, {end_lon:.4f}")
-
-    st.markdown(f"""
-    <div class="success-banner">
-      <div>
-        <div class="big">✅ Route Found!</div>
-        <div class="small">{start_name} → {end_name}</div>
-      </div>
-      <div>
-        <div class="big">⏱ {total_time:.1f} min</div>
-        <div class="small">total journey time</div>
-      </div>
-      <div>
-        <div class="big">📏 {total_dist:.2f} km</div>
-        <div class="small">total distance</div>
-      </div>
-    </div>
-    """, unsafe_allow_html=True)
-
-    # ── Mode breakdown metrics ──
-    if len(mode_times) > 1:
-        st.markdown("**Time breakdown by mode**")
-        bcols = st.columns(len(mode_times))
-        for i, (m, t) in enumerate(mode_times.items()):
-            bcols[i].metric(
-                f"{MODE_EMOJI.get(m,'')} {m.title()}",
-                f"{t:.1f} min",
-                f"{t/total_time*100:.0f}%",
-            )
-
-    # ── Progress bar ──
-    all_legs  = group_into_legs(steps)
-    disp_legs = legs_for_display(all_legs)
-    render_progress_bar(all_legs, total_time)
-
-    # Legend for progress bar
-    legend_mode_html = []
-    for m in dict.fromkeys(l["mode"] for l in all_legs):
-        color = MODE_HEX.get(m, "#888")
-        legend_mode_html.append(
-            f"<span class='legend-item'>"
-            f"<span class='legend-dot' style='background:{color};'></span>"
-            f"{m.title()}</span>"
-        )
-    st.markdown(" ".join(legend_mode_html), unsafe_allow_html=True)
-
-    # ── Advisories ──
-    if advisories:
-        unique_adv = list(dict.fromkeys(advisories))
-        with st.expander(f"⚠️ Advisories ({len(unique_adv)})", expanded=False):
-            for a in unique_adv:
-                st.warning(a)
+    compute = st.button("🔍 Find Best Route", type="primary", use_container_width=True)
 
     st.divider()
+    st.markdown("""
+    **Speed model**
+    <div style='font-size:0.82rem;color:#9aa7c4;margin-top:4px;'>
+    🚶 Walk: 12 min/km<br>
+    🚌 Bus: 4 min/km<br>
+    🚆 Train: timetable data<br>
+    🚖 Cab: 3 min/km (min 1 km)
+    </div>
+    """, unsafe_allow_html=True)
 
-    # ── Two-column layout ──
-    left, right = st.columns([1, 1.4])
+# ── Landing / pre-compute ──
+if not compute:
+    c1, c2, c3 = st.columns(3)
+    with c1:
+        st.markdown("""
+        <div class='feature-card'>
+          <div class='feature-icon'>⚡</div>
+          <div class='feature-title'>Earliest Arrival</div>
+          <p class='feature-desc'>Dijkstra across all modes — local train, metro,
+          monorail, bus, cab and walk — minimising total journey time.</p>
+        </div>""", unsafe_allow_html=True)
+    with c2:
+        st.markdown("""
+        <div class='feature-card'>
+          <div class='feature-icon'>🔄</div>
+          <div class='feature-title'>Least Interchange</div>
+          <p class='feature-desc'>Uses all modes but penalises every line or
+          mode change heavily, so you transfer as few times as possible.</p>
+        </div>""", unsafe_allow_html=True)
+    with c3:
+        st.markdown("""
+        <div class='feature-card'>
+          <div class='feature-icon'>🚏</div>
+          <div class='feature-title'>Public Transport Only</div>
+          <p class='feature-desc'>All transit systems, walk-only access — no cabs.
+          Forces the route to stay on trains, metro, monorail and buses end-to-end.</p>
+        </div>""", unsafe_allow_html=True)
+    st.info("👈 Choose your start and destination from the landmark dropdowns in the sidebar, then click **Find Best Route**.")
+    st.stop()
 
-    with left:
-        st.subheader("📋 Route Steps")
-        for i, leg in enumerate(disp_legs):
-            render_leg_card(leg, i, data)
+# ── Route computation ──
+start_coords = (float(start_lat), float(start_lon))
+end_coords   = (float(end_lat),   float(end_lon))
 
-    with right:
-        st.subheader("🗺️ Route Map")
-        with st.spinner("Rendering map…"):
-            try:
-                buf = render_map(steps, start_coords, end_coords, data.G_road, data)
-                st.image(buf, use_container_width=True)
-                # HTML legend below map
-                legend_items = "".join(
-                    f"<div class='legend-item'>"
-                    f"<div class='legend-dot' style='background:{c};'></div>"
-                    f"<span>{m.title()}</span></div>"
-                    for m, c in {
-                        "Walk":     "#aaaaaa",
-                        "Train":    "#ff3333",
-                        "Metro":    "#00e5c0",
-                        "Monorail": "#ff9800",
-                        "Bus":      "#1e90ff",
-                        "Cab":      "#ffd700",
-                    }.items()
-                )
-                legend_items += (
-                    "<div class='legend-item'>"
-                    "<div class='legend-dot' style='background:#00e5c0;border-radius:50%;'></div>"
-                    "<span>Start</span></div>"
-                    "<div class='legend-item'>"
-                    "<div class='legend-dot' style='background:#ff3333;border-radius:50%;'></div>"
-                    "<span>End</span></div>"
-                )
-                st.markdown(f"<div class='map-legend'>{legend_items}</div>",
-                            unsafe_allow_html=True)
-            except Exception as e:
-                st.error(f"Map rendering failed: {e}")
+mode_labels = {
+    "earliest_arrival":  "Earliest Arrival",
+    "least_interchange": "Least Interchange",
+    "public_transport":  "Public Transport only",
+    "train": "Local Train", "metro": "Metro & Monorail",
+    "bus": "Bus", "car": "Cab",
+}
+with st.spinner(f"Computing {mode_labels.get(mode, mode)} route…"):
+    try:
+        result = router.route(start_coords, end_coords, mode)
+    except Exception as e:
+        st.error(f"Routing error: {e}")
+        st.exception(e)
+        st.stop()
 
+if result[0] is None:
+    if mode == "metro":
+        st.error(
+            "No metro or monorail route found between these locations. "
+            "The metro network (Lines 1, 2A, 3, 7, Navi Mumbai Metro, Monorail) "
+            "may not serve your start or destination within the cab/walk radius. "
+            "Try **Earliest Arrival** to use all modes."
+        )
+    elif mode == "train":
+        st.error(
+            "No local train route found. "
+            "The Western, Central, Harbour or Trans-Harbour lines may not "
+            "serve both locations. Try **Earliest Arrival** to use all modes."
+        )
+    elif mode == "bus":
+        st.error(
+            "No bus route found between these locations. "
+            "No BEST bus routes were loaded that connect both points. "
+            "Try **Earliest Arrival** to use all modes."
+        )
+    elif mode == "public_transport":
+        st.error(
+            "No public transport route found. "
+            "Your start or destination may be too far from any transit stop to walk. "
+            "Try **Earliest Arrival** which allows a cab for the first/last mile."
+        )
+    else:
+        st.error("No route found between the selected locations.")
+    if result[3]:
+        for a in result[3]:
+            st.warning(a)
+    st.stop()
 
-if __name__ == "__main__":
-    main()
+path, steps, total_time, advisories, G_multi = result
+
+# ── Summary ──
+total_dist = sum(s["distance_km"] for s in steps)
+mode_times = {}
+for s in steps:
+    mode_times[s["mode"]] = mode_times.get(s["mode"], 0) + s["time_min"]
+
+start_name = (start_sel.split("  —  ")[0] if start_sel != landmark_labels[0]
+              else f"{start_lat:.4f}, {start_lon:.4f}")
+end_name   = (end_sel.split("  —  ")[0]   if end_sel   != landmark_labels[0]
+              else f"{end_lat:.4f}, {end_lon:.4f}")
+
+st.markdown(f"""
+<div class="success-banner">
+  <div>
+    <div class="big">✅ Route Found!</div>
+    <div class="small">{start_name} → {end_name}</div>
+  </div>
+  <div>
+    <div class="big">⏱ {total_time:.1f} min</div>
+    <div class="small">total journey time</div>
+  </div>
+  <div>
+    <div class="big">📏 {total_dist:.2f} km</div>
+    <div class="small">total distance</div>
+  </div>
+</div>
+""", unsafe_allow_html=True)
+
+# ── Mode breakdown metrics ──
+if len(mode_times) > 1:
+    st.markdown("**Time breakdown by mode**")
+    bcols = st.columns(len(mode_times))
+    for i, (m, t) in enumerate(mode_times.items()):
+        bcols[i].metric(
+            f"{MODE_EMOJI.get(m,'')} {m.title()}",
+            f"{t:.1f} min",
+            f"{t/total_time*100:.0f}%",
+        )
+
+# ── Progress bar ──
+all_legs  = group_into_legs(steps)
+disp_legs = legs_for_display(all_legs)
+render_progress_bar(all_legs, total_time)
+
+legend_mode_html = []
+for m in dict.fromkeys(l["mode"] for l in all_legs):
+    color = MODE_HEX.get(m, "#888")
+    legend_mode_html.append(
+        f"<span class='legend-item'>"
+        f"<span class='legend-dot' style='background:{color};'></span>"
+        f"{m.title()}</span>"
+    )
+st.markdown(" ".join(legend_mode_html), unsafe_allow_html=True)
+
+# ── Advisories ──
+if advisories:
+    unique_adv = list(dict.fromkeys(advisories))
+    with st.expander(f"⚠️ Advisories ({len(unique_adv)})", expanded=False):
+        for a in unique_adv:
+            st.warning(a)
+
+st.divider()
+
+# ── Two-column layout ──
+left, right = st.columns([1, 1.4])
+
+with left:
+    st.subheader("📋 Route Steps")
+    for i, leg in enumerate(disp_legs):
+        render_leg_card(leg, i, data)
+
+with right:
+    st.subheader("🗺️ Route Map")
+    with st.spinner("Rendering map…"):
+        try:
+            buf = render_map(steps, start_coords, end_coords, data.G_road, data)
+            st.image(buf, use_container_width=True)
+            legend_items = "".join(
+                f"<div class='legend-item'>"
+                f"<div class='legend-dot' style='background:{c};'></div>"
+                f"<span>{m.title()}</span></div>"
+                for m, c in {
+                    "Walk":     "#aaaaaa",
+                    "Train":    "#ff3333",
+                    "Metro":    "#00e5c0",
+                    "Monorail": "#ff9800",
+                    "Bus":      "#1e90ff",
+                    "Cab":      "#ffd700",
+                }.items()
+            )
+            legend_items += (
+                "<div class='legend-item'>"
+                "<div class='legend-dot' style='background:#00e5c0;border-radius:50%;'></div>"
+                "<span>Start</span></div>"
+                "<div class='legend-item'>"
+                "<div class='legend-dot' style='background:#ff3333;border-radius:50%;'></div>"
+                "<span>End</span></div>"
+            )
+            st.markdown(f"<div class='map-legend'>{legend_items}</div>",
+                        unsafe_allow_html=True)
+        except Exception as e:
+            st.error(f"Map rendering failed: {e}")
